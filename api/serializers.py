@@ -6,10 +6,12 @@ from api.models import Entry, User
 class UserSerializer(serializers.ModelSerializer):
     last_entry = serializers.SerializerMethodField()
     total_message_count = serializers.SerializerMethodField()
+    username = serializers.CharField(source='name', read_only=True)
+    name = serializers.CharField(write_only=True)
 
     class Meta:
         model = User
-        fields = ['name', 'last_entry', 'total_message_count']
+        fields = ['name', 'username', 'last_entry', 'total_message_count']
 
     def get_total_message_count(self, instance):
         total_count = instance.entries.count()
@@ -20,6 +22,7 @@ class UserSerializer(serializers.ModelSerializer):
         if last_entry:
             return f"{last_entry.subject} | {last_entry.message}"
         return None
+
 
 
 class EntrySerializer(serializers.ModelSerializer):
