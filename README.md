@@ -42,7 +42,7 @@ Projenin testlerini çalıştırmak için aşağıdaki komutu kullanabilirsiniz:
 
 ## API Kullanımı
 
-- Guest Book Oluşturma:
+- Entry Oluşturma:
 
 `POST /api/guest-book/`
 
