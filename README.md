@@ -1,6 +1,6 @@
 # Proje Adı
 
-Bu projede, bir guest book (ziyaretçi defteri) uygulaması ve kullanıcı bilgilerini yöneten bir API bulunmaktadır.
+Bu projede, ziyaretçi defteri uygulaması ve kullanıcı bilgilerini yöneten bir API bulunmaktadır.
 
 ## Kurulum Adımları
 
